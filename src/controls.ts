@@ -36,7 +36,7 @@ end`);
 export async function get_library_tracks(): Promise<Track[]>{
     const text = await executeScript(`const music = Application("Music")
 
-JSON.stringify(music.playlists()[0].tracks().map(track => {
+JSON.stringify(music.tracks().map(track => {
     return {
         artist: track.artist(),
         album: track.album(),
