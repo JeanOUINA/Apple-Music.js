@@ -1,5 +1,5 @@
 {
-  "name": "typescript-template",
+  "name": "music-applescript",
   "version": "1.0.0",
   "description": "A template for me, instead of having to create a new project from scratch each time",
   "main": "dist/index.js",
@@ -9,7 +9,8 @@
     "start": "node .",
     "watch": "tsc --watch",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "prepublish": "npm build"
   },
   "author": "JeanOUINA",
   "license": "UNLICENSED",
