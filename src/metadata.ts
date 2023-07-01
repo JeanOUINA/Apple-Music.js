@@ -6,9 +6,7 @@ export interface Metadata {
     t: Track & {
 		volume: number,
 		elapsed: number,
-		shuffle: boolean,
-		artwork: boolean,
-		artwork_format: boolean
+		shuffle: boolean
     },
     isOpen: boolean
 }
