@@ -6,7 +6,19 @@ export interface Track {
     name: string,
     id: number,
     duration: number,
-    loved: boolean
+    loved: boolean,
+    composer: string,
+    genre: string,
+    date_added: string,
+    track_number: number,
+    track_count: number,
+    disc_number: number,
+    disc_count: number,
+    year: number,
+    size: number,
+    media_kind: string,
+    played_count: number,
+    played_date: string
 }
 
 export function launch(){

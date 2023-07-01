@@ -26,7 +26,7 @@ tell application "Music"
 	if running then
 		set state of d to player state as text
 		if (player state as text) is not "stopped" then
-			set t of d to {|name|:name of current track, |artist|:artist of current track, |album|:album of current track, |duration|:duration of current track, elapsed:player position, volume:sound volume, shuffle:shuffle enabled, |id|:database ID of current track, |loved|:loved of current track, artwork_format:false, |artwork|:false}
+			set t of d to {|name|:name of current track, |artist|:artist of current track, |album|:album of current track, |duration|:duration of current track, elapsed:player position, volume:sound volume, shuffle:shuffle enabled, |id|:database ID of current track, |loved|:loved of current track, artwork_format:false, |artwork|:false, composer:composer of current track, genre:genre of current track, date_added:date added of current track as «class isot» as string, track_number:track number of current track, track_count:track count of current track, disc_number:disc number of current track, disc_count:disc count of current track, year:year of current track, size:size of current track, media_kind:media kind of current track as string, played_count:played count of current track, played_date:played date of current track as «class isot» as string}
 			
             try
 				set artwork_format of t of d to format of artwork 1 of current track as string
