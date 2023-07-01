@@ -1,7 +1,7 @@
 {
   "name": "music-applescript",
-  "version": "1.0.0",
-  "description": "A template for me, instead of having to create a new project from scratch each time",
+  "version": "1.1.0",
+  "description": "Interact with Apple Music with NodeJS through Apple Script",
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run build && npm start",

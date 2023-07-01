@@ -29,7 +29,7 @@ export function back(){
 }
 export function love(id:number, loved:boolean){
     return executeScript(`tell application "Music"
-    set t to track 1 of (tracks whose id is equal to 3909)
+    set t to track 1 of (tracks whose id is equal to ${id})
     set loved of t to ${loved}
 end`);
 }
@@ -43,7 +43,19 @@ JSON.stringify(music.tracks().map(track => {
         name: track.name(),
         id: track.id(),
         duration: track.duration(),
-        loved: track.loved()
+        loved: track.loved(),
+        composer: track.composer(),
+        genre: track.genre(),
+        date_added: track.dateAdded(),
+        track_number: track.trackNumber(),
+        track_count: track.trackCount(),
+        disc_number: track.discNumber(),
+        disc_count: track.discCount(),
+        year: track.year(),
+        size: track.size(),
+        media_kind: track.mediaKind(),
+        played_count: track.playedCount(),
+        played_date: track.playedDate()
     }
 }))`, ["-l", "JavaScript"]);
     return JSON.parse(text);
@@ -58,7 +70,19 @@ JSON.stringify({
     name: track.name(),
     id: track.id(),
     duration: track.duration(),
-    loved: track.loved()
+    loved: track.loved(),
+    composer: track.composer(),
+    genre: track.genre(),
+    date_added: track.dateAdded(),
+    track_number: track.trackNumber(),
+    track_count: track.trackCount(),
+    disc_number: track.discNumber(),
+    disc_count: track.discCount(),
+    year: track.year(),
+    size: track.size(),
+    media_kind: track.mediaKind(),
+    played_count: track.playedCount(),
+    played_date: track.playedDate()
 })`, ["-l", "JavaScript"]);
     return JSON.parse(text);
 }
